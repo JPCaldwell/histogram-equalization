@@ -36,7 +36,7 @@ for p in range(0,256):
     currItem = cumHist[p]
     temp = int(round(255.0/(xval*yval)*currItem)) #currItem/(xval * yval) calculates the values for the CDF using the cumulative histogram (xval* yval is the total number of pixels)
     hist_memo[p] = temp                           #it calculates the percentage of intensity values equal to or less than the current value
-												  #this is where the equalized intensities are calculated by multiplying the CDF value by the total gray levels (256, starting at 0)
+                                                  #this is where the equalized intensities are calculated by multiplying the CDF value by the total gray levels (256, starting at 0)
 												  
 #find transformed intensities and add them to new image
 for row in range(0,xval-1):
